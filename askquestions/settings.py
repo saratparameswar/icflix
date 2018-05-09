@@ -26,7 +26,7 @@ SECRET_KEY = 'b$semf&-yha(hnt#@sbjm(mt)jysrxh754#0co+fs@3w1w1x)%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','test-sarat6.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','icflix-app.herokuapp.com']
 
 
 # Application definition
