@@ -26,7 +26,7 @@ class AnswerSerializer(serializers.ModelSerializer):
         if self.context['allow'] == 'True':
             ret = super(AnswerSerializer, self).to_representation(instance)
         else:
-            if self.context['user'] !=  instance.answered_by.id:
+            if self.context['user'] !=  instance.answered_by.user.id:
                 ret = super(AnswerSerializer,self).to_representation(instance)
         return ret
 
