@@ -30,7 +30,7 @@ class GetQuestionsAPI(RequestLogViewMixin,APIView):
         allow = request.GET['allow']
 
         questions = Questions.objects.filter(is_private=False)
-        serializer = self.serializer_class(questions, many=True, context={"user": 1,'allow':allow})
+        serializer = self.serializer_class(questions, many=True, context={"user": request.user.id,'allow':allow})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
